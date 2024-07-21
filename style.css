@@ -22,7 +22,7 @@ hr{
 }
 .bg-img{
     background-image: url("./images/bg-img.jpg");
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     object-fit: cover;
     color: white;
@@ -74,7 +74,25 @@ hr{
 .my-btn{
     font-size: 1.2rem;
 }
+.box {
+    --mask:
+      radial-gradient(34.99px at 50% calc(100% - 48.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+      radial-gradient(34.99px at 50% calc(100% + 18.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+
+  
+  .top {
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 80px),50% 100%,0 calc(100% - 80px));
+  }
+  .bottom {
+    clip-path: polygon(0 0,50% 80px,100% 0,100% 100%,0 100%);
+    margin-top: -70px;
+  }
+/* About-me  */
 .about-me{
+    margin-top: 3rem;
     font-size: 1.3rem;
 }
 .about-me-text{
@@ -177,6 +195,7 @@ h1.contact-msg{
     
 }
 .form input, .form textarea{
+    /* color: #dfdfdf; */
     font-weight: 400;
     width: 30rem;
     min-width: 20rem;
@@ -214,6 +233,9 @@ h1.contact-msg{
 }
 .github:hover{
     color: black;
+}
+.whatsapp:hover{
+    color: rgb(0, 209, 80);
 }
 
 .contact-hr{
@@ -278,7 +300,7 @@ h1.contact-msg{
         border-radius: 25px;
     }
     .bg-img{
-        /* height: 110vh; */
+        height: 110vh;
     }
     .my-btn{
         margin-bottom: 3rem;
